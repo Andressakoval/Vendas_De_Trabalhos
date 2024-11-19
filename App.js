@@ -15,10 +15,10 @@ export default function App() {
   useEffect(() => {
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user); // Se o usuário estiver logado, setamos o usuário no estado
+      setUser(user);
     });
 
-    return () => unsubscribe(); // Limpar a assinatura quando o componente for desmontado
+    return () => unsubscribe();
   }, []);
 
   return (
